@@ -10,7 +10,6 @@ Con Voice Agent de IBM es posible crear un call cognitive que nos permite tener 
 
 ## 2. Componentes 📋 
 
-# Some markdown *click below* <a href="https://cloud.ibm.com/catalog/services/voice-agent-with-watson" target="_blank">New Tab</a>
 
 - [Voice Agent](https://cloud.ibm.com/catalog/services/voice-agent-with-watson) : permite interacciones de voz directas y automatizadas por teléfono.
 
