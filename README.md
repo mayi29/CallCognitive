@@ -45,10 +45,15 @@ Nota --> Seleccione la opción de auto generar credenciales para que sea un proc
 
 ![Captura de Pantalla 2020-10-13 a la(s) 11 38 36 p  m](https://user-images.githubusercontent.com/44415995/95944558-0e47f700-0dae-11eb-9a0e-9621ebe7b264.png)
 
-6. 
+6. Llegamos a la sección de Text to spech donde debemos escoger el tipo de sercicio, el nombre la instancia del servicio y el tipo de voz que queramos que tenga nuestro call cognitivo.
 
+![Captura de Pantalla 2020-10-13 a la(s) 11 53 28 p  m](https://user-images.githubusercontent.com/44415995/95945160-78ad6700-0daf-11eb-8563-74424ca2041d.png)
 
-![Captura de Pantalla 2020-10-13 a la(s) 11 49 10 p  m](https://user-images.githubusercontent.com/44415995/95944867-dab99c80-0dae-11eb-8b14-bf9a8781e774.png)
+7. Finalmente oprimos el boton create a agent que se ecuentra en la parte superior y listo.
+Es hora de llamar a probar nuestro call cognitive.
+
+![Captura de Pantalla 2020-10-13 a la(s) 11 59 12 p  m](https://user-images.githubusercontent.com/44415995/95945487-2fa9e280-0db0-11eb-9aa4-19c3d8a33cec.png)
+
 
 
 
@@ -58,7 +63,7 @@ Nota --> Seleccione la opción de auto generar credenciales para que sea un proc
 
 ## Mas información 📖
 - [Inteligencia artificial](https://www.ibm.com/cloud/)
-- [Referencia principal](https://github.com/IBM/predict-fraud-using-auto-ai)
+
 
 
 ## Autores ✒️
