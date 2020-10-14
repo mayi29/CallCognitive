@@ -1,0 +1,521 @@
+{
+  "intents": [
+    {
+      "intent": "Despedida",
+      "examples": [
+        {
+          "text": "gracias"
+        },
+        {
+          "text": "adios"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Etapa",
+      "examples": [
+        {
+          "text": "en que etapa me encuentro"
+        },
+        {
+          "text": "etapa"
+        },
+        {
+          "text": "Entonces en qué etapa me encuentro?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Positivo",
+      "examples": [
+        {
+          "text": "si"
+        },
+        {
+          "text": "si quiero"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Inicio_Solicitud",
+      "examples": [
+        {
+          "text": "Cuándo inicia mi solicitud?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Significado_Etapa",
+      "examples": [
+        {
+          "text": "y eso que significa?"
+        },
+        {
+          "text": "como asi estado de tramite?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Documentos_Pendiente",
+      "examples": [
+        {
+          "text": "Si, tengo pendiente entregar algun documento?"
+        },
+        {
+          "text": "tengo pendiente entregar algun documento?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Saludo",
+      "examples": [
+        {
+          "text": "Hola"
+        },
+        {
+          "text": "Buenos días"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Tiempo_Solicitud",
+      "examples": [
+        {
+          "text": "Y cuanto se puede tardar?"
+        },
+        {
+          "text": "Y cuánto tiempo se va a demorar?"
+        },
+        {
+          "text": "y cuanto puede tardar?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Notificaciones_Automaticas",
+      "examples": [
+        {
+          "text": "Quiero las notificaciones automáticas"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Negativo",
+      "examples": [
+        {
+          "text": "No quiero"
+        },
+        {
+          "text": "No"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Estado_Tramite",
+      "examples": [
+        {
+          "text": "Estado de mi tramite"
+        },
+        {
+          "text": "quería confirmar el estado de mi trámite"
+        },
+        {
+          "text": "Hola, quiería confirmar el estado de mi trámite"
+        },
+        {
+          "text": "Hola, quiería saber el estado de mi solicitud"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Nombre",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "Nombre",
+          "patterns": [
+            "[A-Za-z ñ]+"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "es",
+  "metadata": {
+    "skill": {
+      "counts": {
+        "intents": 11,
+        "entities": 1,
+        "dialog_nodes": 18
+      }
+    },
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "Bienvenido",
+      "variable": "$Nombre",
+      "dialog_node": "slot_5_1598553848941"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "$Nombre estoy aquí para ayudarte a solucionar las dudas sobre tu solicitud de Pensión de Vejez. Cuentame tus dudas"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1598553848941",
+      "event_name": "filled",
+      "dialog_node": "handler_6_1598553903597",
+      "previous_sibling": "handler_1_1598553849093"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Por favor ingresa tu nombre"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1598553848941",
+      "event_name": "nomatch",
+      "dialog_node": "handler_4_1598554023016",
+      "previous_sibling": "handler_6_1598553903597"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bienvenido, estoy aquí para ayudarte a solucionar las dudas sobre tu solicitud de Pensión de Vejez. Antes de empezar ¿cómo te llamas?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_5_1598553848941",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1598553849093",
+      "previous_sibling": "handler_4_1598553849093"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1598553848941",
+      "context": {
+        "Nombre": "@Nombre.literal"
+      },
+      "conditions": "@Nombre.literal",
+      "event_name": "input",
+      "dialog_node": "handler_4_1598553849093"
+    },
+    {
+      "type": "standard",
+      "title": "Negativo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muchas gracias y recuerda que estoy aquí para ayudarte"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Negativo",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1598549597780",
+      "previous_sibling": "node_6_1598549768879"
+    },
+    {
+      "type": "standard",
+      "title": "Inicio_Solicitud",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "De acuerdo a casos similares al tuyo, estimamos iniciar tu solicitud de pensión en los próximos 20 días hábiles ."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Inicio_Solicitud",
+      "dialog_node": "node_10_1598621167743",
+      "previous_sibling": "Bienvenido"
+    },
+    {
+      "type": "standard",
+      "title": "Notificaciones_Automaticas",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, las notificaciones han sido activadas, ¿tienes alguna consulta adicional?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Notificaciones_Automaticas",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1598549678388",
+      "previous_sibling": "node_2_1598549321996"
+    },
+    {
+      "type": "standard",
+      "title": "Tiempo_Solictud",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "El proceso completo de solicitud de pensión por vejez podría finalizar en alrededor de 70 días hábiles ¿Tienes alguna consulta adicional?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Tiempo_Solicitud",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1598549321996",
+      "previous_sibling": "node_3_1598549134383"
+    },
+    {
+      "type": "frame",
+      "title": "Bienvenido",
+      "output": {
+        "generic": []
+      },
+      "conditions": "welcome || #Saludo || conversation_start",
+      "digress_in": "does_not_return",
+      "dialog_node": "Bienvenido",
+      "previous_sibling": "node_10_1598621167404"
+    },
+    {
+      "type": "standard",
+      "title": "En otras cosas",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "No le he entendido. Intente reformular la consulta"
+              },
+              {
+                "text": "No entendí el significado."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "En otras cosas",
+      "previous_sibling": "node_6_1598549597780",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Etapa",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Desde el 16 de Julio de 2020 te encuentras en la etapa del paso a paso de tu historia laboral."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Etapa",
+      "dialog_node": "node_5_1598620808982",
+      "previous_sibling": "node_10_1598621167743"
+    },
+    {
+      "type": "standard",
+      "title": "Significado_Etapa",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Nos estamos asegurando que no falte nada durante el tiempo que estuviste trabajando y aportaste a tu pensión"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Significado_Etapa",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1598549134383",
+      "previous_sibling": "node_5_1598620808982"
+    },
+    {
+      "type": "standard",
+      "title": "Estado_Tramite",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$Nombre aún no as iniciado tu solicitud, te encuentras en los pasos previos para dar inicio.\nTu solicitud iniciará en cuanto termines la etapa en la que te encuentras"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Estado_Tramite",
+      "dialog_node": "node_4_1598549101545",
+      "previous_sibling": "node_1_1598549859101"
+    },
+    {
+      "type": "standard",
+      "title": "Documentos_Pendientes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Si, estamos esperando tus documentos, recuerda que debes entregarnos:\n- Fotocopia del registro civil de nacimiento.\n- Fotocopia al 150% de cédula de ciudadanía.\n- Certificado de cuenta bancaria.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Documentos_Pendiente",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1598549859101",
+      "previous_sibling": "node_9_1598549678388"
+    },
+    {
+      "type": "standard",
+      "title": "Positivo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Dime ¿en que te puedo colaborar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Positivo",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1598549768879",
+      "previous_sibling": "node_4_1598549101545"
+    },
+    {
+      "type": "standard",
+      "title": "Despedida",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "¿Tienes alguna consulta adicional?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Despedida",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_4_1598550006539",
+      "previous_sibling": "En otras cosas"
+    },
+    {
+      "type": "standard",
+      "title": "Silencio",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hola"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "",
+      "dialog_node": "node_10_1598621167404"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Querías decir:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Ninguna de las anteriores"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Querías decir:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "Seguros_Voice"
+}
