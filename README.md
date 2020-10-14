@@ -20,7 +20,23 @@ Con Voice Agent de IBM es posible crear un call cognitive que nos permite tener 
 
 ## 3. Paso a Paso 👣
 
-Antes de empezar Ingrese a IBM Cloud y adquiera los servicios que se encuentran en los componentes. Recuerde comprar o usar un número existente de twilio.
+Para iniciar ingrese a IBM Cloud y adquiera los servicios que se encuentran en los componentes. 
+
+Es necesario que en Twilio creemos un Trunks
+
+![Captura de Pantalla 2020-10-14 a la(s) 8 33 58 a  m](https://user-images.githubusercontent.com/44415995/95998604-a4a20a00-0dfa-11eb-9980-14859a10e0ce.png)
+
+
+Una vez creado vamos a origination y agregamos una ORIGINATION URI. Por favor diligencie la sifuiente  sip:us-south.voiceagent.cloud.ibm.com y guarde los cambios.
+![Captura de Pantalla 2020-10-14 a la(s) 8 34 51 a  m](https://user-images.githubusercontent.com/44415995/95998599-a4097380-0dfa-11eb-961d-ed56846ccfec.png)
+
+Adquiera un número en Twilio y cuando lo este creando es necesario que el Voice lo configure con SIP Trunk y elija el nombre del Trunk que acaba de crear.
+
+![Captura de Pantalla 2020-10-14 a la(s) 8 48 45 a  m](https://user-images.githubusercontent.com/44415995/95998595-a2d84680-0dfa-11eb-8e67-35af308700f6.png)
+
+
+
+
 
 1. Ingresamos a Watson Assistant donde creamos las intenciones necesarias para entrenar nuestras conversaciones. Una vez realizado el diálogo nos posicionamos en el nodo donde queremos que nuestro call cognitive inicie y colocamos la varible conversation_start. 
 
