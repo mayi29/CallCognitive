@@ -20,9 +20,14 @@ Con Voice Agent de IBM es posible crear un call cognitive que nos permite tener 
 
 ## 3. Paso a Paso 👣
 
-1. Ingrese a IBM Cloud y adquiera los servicios que se encuentran en los componentes:
+Antes de empezar Ingrese a IBM Cloud y adquiera los servicios que se encuentran en los componentes. Recuerde comprar o usar un número existente de twilio.
 
-Voice Agent:
+1. Ingresamos al servicio de Voice Agent: Oprimimos el botón create an agent o crear agente en caso de que este en español:
+
+![Captura de Pantalla 2020-10-13 a la(s) 11 02 03 p  m](https://user-images.githubusercontent.com/44415995/95942277-63810a00-0da8-11eb-8e6d-ec1915b01829.png)
+
+
+
 
 
 
