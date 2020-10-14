@@ -10,12 +10,21 @@ Con Voice Agent de IBM es posible crear un call cognitive que nos permite tener 
 
 ## 2. Componentes 📋 
 
+- [Voice Agent](https://cloud.ibm.com/catalog/services/voice-agent-with-watson) : permite interacciones de voz directas y automatizadas por teléfono.
+
 - [Speech to Text](https://cloud.ibm.com/catalog/services/speech-to-text) : Convierte el audio del interlocutor en texto.
 
 - [Watson Assistant](https://cloud.ibm.com/catalog/services/watson-assistant) : Analiza el texto, lo correlaciona con intenciones y ofrece una respuesta en función de un diálogo que crea el usuario.
 
 - [Text to Speech](https://cloud.ibm.com/catalog/services/text-to-speech)  : Convierte la respuesta en audio de voz.
-## 3. Auto-IA por medio de IBM CLOUD 🚀
+
+## 3. Paso a Paso 👣
+
+1. Ingrese a IBM Cloud y adquiera los servicios que se encuentran en los componentes:
+
+Voice Agent:
+
+
 
 ## Construido con 🛠️
 - [IBM CLOUD](https://developer.ibm.com/technologies/artificial-intelligence/)
