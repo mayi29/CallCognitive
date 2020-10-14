@@ -22,7 +22,9 @@ Con Voice Agent de IBM es posible crear un call cognitive que nos permite tener 
 
 Antes de empezar Ingrese a IBM Cloud y adquiera los servicios que se encuentran en los componentes. Recuerde comprar o usar un número existente de twilio.
 
-1. Nota --> Debe tener el Watson Assistan entrenado con las intenciones que quiere que sean reconocidas a lo largo de la conversación.
+1. Ingresamos a Watson Assistant donde creamos las intenciones necesarias para entrenar nuestras conversaciones. Una vez realizado el diálogo nos posicionamos en el nodo donde queremos que nuestro call cognitive inicie y colocamos la varible conversation_start. 
+
+![Captura de Pantalla 2020-10-14 a la(s) 12 16 50 a  m](https://user-images.githubusercontent.com/44415995/95947004-54ec2000-0db3-11eb-9289-85ce44fd57f3.png)
 
 
 2. Ingresamos al servicio de Voice Agent: Oprimimos el botón create an agent o crear agente en caso de que este en español:
