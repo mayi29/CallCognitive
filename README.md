@@ -27,7 +27,7 @@ En Twilio cree un Trunks:
 ![Captura de Pantalla 2020-10-14 a la(s) 8 33 58 a  m](https://user-images.githubusercontent.com/44415995/95998604-a4a20a00-0dfa-11eb-9980-14859a10e0ce.png)
 
 
-Una vez creado vamos a origination y agregamos la siguiente ORIGINATION URI ***sip:us-south.voiceagent.cloud.ibm.com***, guarde los cambios.
+Una vez creado el Trunk vamos a origination y agregamos la siguiente ORIGINATION URI ***sip:us-south.voiceagent.cloud.ibm.com***, guarde los cambios.
 
 ![Captura de Pantalla 2020-10-14 a la(s) 8 34 51 a  m](https://user-images.githubusercontent.com/44415995/95998599-a4097380-0dfa-11eb-961d-ed56846ccfec.png)
 
